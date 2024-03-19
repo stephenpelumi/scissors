@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import UrlForm from './UrlForm';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -453,65 +454,10 @@ function dashboard(){
             </section>
           </article>
           {/* The price section ends here  */}
-          {/* this is the section for the url form */}
-          <form className="url_form_background">
-            <div className="vector_design_form">
-              <img className="vector_A" src={vector_A} alt="" />
-              <img className="vector_B" src={vector_B} alt="" />
-              <img className="vector_C" src={vector_C} alt="" />
-            </div>
-            <section className="actual_form">
-              <div className="url">
-                <input
-                  className="url_input"
-                  type="text"
-                  placeholder="Paste URL here..."
-                  style={{ "--placeholder-color": "#3284FF" }}
-                />
-              </div>
-              <div className="floated_input">
-                <div>
-                  <select 
-                name="job_level"
-                className="domain_input"
-                placeholder="choose Domain"
-                required
-              >
-                <option value="" disabled selected hidden>
-                  Choose Domain
-                </option>
-                <option value="Analyst">.com</option>
-                <option value="Associate">.ng</option>
-              </select>
-              <img className="arrow_down_img" src={arrow_down_img} alt="" />
-                </div>
-               
-                <div className="alias">
-                  <input
-                    className="alias_input"
-                    type="text"
-                    placeholder="Type Alias here"
-                    style={{ "--placeholder-color": "#3284FF" }}
-                  />
-                </div>
-              </div>
-              <button className="trim_url_button">
-                Trim URL
-                <img className="button_image" src={button_image} alt="" />
-              </button>
-              <div className="form_text">
-                <a className="text_content_form" href="#">
-                  By clicking TrimURL, I agree to the
-                  <b> Terms of Service, Privacy Policy</b> and Use of Cookies.
-                </a>
-              </div>
-            </section>
-            <div className="lower_vector_form">
-              <img className="vector_D" src={vector_D} alt="" />
-              <img className="vector_E" src={vector_E} alt="" />
-            </div>
-          </form>
-          {/* This is the end of the url form */}
+          <div>
+    
+      <UrlForm /> 
+    </div>
           {/* the FAQ section starts here */}
           <article>
             <div className="questioning_section">
