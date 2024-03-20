@@ -479,7 +479,10 @@ ul{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 99;
+
 }
+
 .url_input{
     width: 80%;
     height: 20px;
@@ -501,11 +504,15 @@ ul{
     border: 0.5px solid #3284FF;
     font-family: Gilroy-Medium;
     background-color: white;
+    color: #3284FF;
     padding: 12px 25px 12px 25px ;
     border-radius: 15px;
     font-size: 14px;
     font-size: 12px;
 }
+.placeholder-color {
+    --placeholder-color: #3284FF;
+  }
 .alias_input::placeholder {
     color: var(--placeholder-color);
   }
@@ -583,7 +590,7 @@ select {
 }
 .vector_A{
     height: 480px;
-    width: 650px;
+    width: 5y50px;
     /* margin-left: -150px; */
     opacity: 0.2;
 }
@@ -698,6 +705,7 @@ select {
     font-family: Gilroy-Medium;
     margin-top: 25px;
 }
+
 .question_six{
     display: flex;
     justify-content: center;
@@ -926,4 +934,8 @@ select {
      margin-top: -235px;
     margin-left: auto;
     text-align: left;
+}
+.contact-text{
+    text-decoration: none;
+    color: black;
 }

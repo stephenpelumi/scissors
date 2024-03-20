@@ -34,22 +34,18 @@ export const signInWithGoogle = async () => {
 };
 
 
-const signInWithApple = async () => {
+// Function to sign in with Apple
+export const signInWithApple = async () => {
   try {
-    const provider = new firebase.auth.AppleAuthProvider();
-    const result = await signInWithPopup(auth, provider);
-    const appleToken = result.credential.appleId; // Access token
-
-    // You can use the access token for further processing or verification
-    // (if needed) before signing in with Firebase Authentication.
-
-    // ... rest of your code using appleToken and Firebase sign-in
+    const provider = new firebase.auth.OAuthProvider('apple.com');
+    // Add additional scopes if needed
+    provider.addScope('email');
+    provider.addScope('name');
+    await signInWithPopup(auth, provider);
   } catch (error) {
     // Handle errors
     console.error('Error signing in with Apple:', error);
   }
 };
 
-export { GoogleAuthProvider };
-export {  signInWithApple };
 export default app;
